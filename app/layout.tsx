@@ -13,11 +13,12 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://renaldi-dev.vercel.app/"),
   title: {
-    default: "Renaldi Mohamad",
+    default:
+      "Renaldi Mohamad | Engineer building systems that turn complexity into clarity.",
     template: "%s — Renaldi Mohamad",
   },
   description:
-    "Engineer building systems that turn complexity into clarity. Writing about dashboards, clean UI, and thoughtful engineering.",
+    "I’m interested in how systems scale, how ideas spread, and how clarity changes everything.",
 
   keywords: [
     "Renaldi Mohamad",
@@ -29,8 +30,10 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Renaldi Mohamad",
-    description: "Engineer building systems that turn complexity into clarity.",
+    title:
+      "Renaldi Mohamad | Engineer building systems that turn complexity into clarity.",
+    description:
+      "I’m interested in how systems scale, how ideas spread, and how clarity changes everything.",
     url: "https://renaldi-dev.vercel.app/",
     siteName: "Renaldi Mohamad",
     images: [
