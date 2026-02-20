@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
+/* =========================
+   Color System
+========================= */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f0f0f;
+  --muted: #6b7280;
+  --border: #e5e7eb;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: #0b0b0b;
+  --foreground: #f3f3f3;
+  --muted: #9ca3af;
+  --border: #1f1f1f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================
+   Base Rendering
+========================= */
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
+/* =========================
+   Body
+========================= */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.7;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+/* =========================
+   Responsive Typography
+========================= */
+h1 {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+p {
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
+  color: var(--muted);
+}
+
+/* =========================
+   Links
+========================= */
+a {
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+/* =========================
+   Border Utility
+========================= */
+.border-subtle {
+  border-color: var(--border);
+}
+
+/* =========================
+   Selection
+========================= */
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+/* =========================
+   Fade Animation (Page Load)
+========================= */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
