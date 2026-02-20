@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://renaldimohamad.com"),
+  metadataBase: new URL("https://renaldi-dev.vercel.app/"),
   title: {
     default: "Renaldi Mohamad",
     template: "%s — Renaldi Mohamad",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Renaldi Mohamad",
     description: "Engineer building systems that turn complexity into clarity.",
-    url: "https://renaldimohamad.com",
+    url: "https://renaldi-dev.vercel.app/",
     siteName: "Renaldi Mohamad",
     images: [
       {
