@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Renaldi Mohamad",
     images: [
       {
-        url: "/images/og-cover.jpg",
+        url: "https://renaldi-dev.vercel.app/images/profile_aldi_1.png",
         width: 1200,
         height: 630,
         alt: "Renaldi Mohamad — Engineering & Systems",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Renaldi Mohamad",
     description: "Engineer building systems that turn complexity into clarity.",
-    images: ["/images/og-cover.jpg"],
+    images: ["https://renaldi-dev.vercel.app/images/profile_aldi_1.png"],
   },
 
   robots: {
