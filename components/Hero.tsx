@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Hero() {
   return (
@@ -38,16 +39,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Statement lebih hidup */}
       <p className="text-[19px] md:text-[20px] leading-[1.5] font-normal text-neutral-800 dark:text-neutral-100">
-        I build systems that make complex data feel simple.
+        I’m building quietly — in systems, in habits, and in life.
       </p>
 
-      {/* Body lebih ringan */}
       <p className="text-[16px] leading-[1.8] text-neutral-600 dark:text-neutral-400 max-w-xl">
-        This is my digital space — where I document thoughts, lessons, and quiet
-        realizations about engineering, clarity, and building things that
-        actually work.
+        This is a space for reflection — on growth that isn’t loud, discipline
+        that compounds, and clarity that takes time.
       </p>
 
       <div className="pt-2">

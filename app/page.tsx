@@ -12,78 +12,79 @@ export default function Home() {
   const content = {
     en: {
       philosophyTitle:
-        "I’m interested in how systems scale, how ideas spread, and how clarity changes everything.",
+        "I’m interested in growth — how it forms quietly, how discipline compounds, and how clarity reshapes direction.",
+
       philosophyDesc:
-        "This is not a portfolio. It’s a thinking room — a place where I document lessons from building, explore ideas quietly, and reflect on what actually works.",
+        "This is not a portfolio. It’s a reflective space — where I write about mindset, consistency, and the quiet process of becoming better over time.",
 
       journeyTitle: "Journey",
       journey1:
-        "I am a wanderer at heart — building a life away from where I started. No guarantees, no shortcuts — just a quiet determination to learn and build something meaningful.",
+        "I left home to build something of my own. No guarantees. No shortcuts. Just a decision to continue moving forward, even when things felt uncertain.",
       journey2:
-        "Living in someone else’s city taught me more than any course could. It taught me resilience, humility, and how to stay consistent even when no one is watching.",
+        "Living away from familiarity taught me resilience. It taught me that progress is rarely loud — and that most growth happens in silence.",
       journey3:
-        "Growth rarely happens in comfort. It happens when you choose to keep going anyway.",
+        "You don’t always feel stronger while growing. Sometimes you just feel tired. But growth doesn’t require excitement — it requires continuation.",
       journey4:
-        "I grew up without the presence of a father. My mother carried the responsibility of raising us on her own — quietly, consistently, and with strength that didn’t need to be loud.",
+        "I grew up without a father figure. My mother carried everything quietly. Strength, responsibility, sacrifice — without noise.",
       journey5:
-        "My sister stood beside her, and together they became my foundation. Everything I build today carries their sacrifice, their support, and their love. I love you, Mom. I love you, my family.",
+        "My sister stood beside her. Everything I build today stands on their patience, love, and belief. Depth begins at home.",
 
       principlesTitle: "Principles",
       principles: [
-        "Clarity over complexity.",
-        "Systems should scale without drama.",
-        "Good UI reduces cognitive load.",
-        "Simplicity is engineered, not accidental.",
+        "Clarity over noise.",
+        "Consistency over intensity.",
+        "Depth over visibility.",
+        "Build slowly. Build steadily.",
       ],
 
-      notesTitle: "Notes",
+      notesTitle: "Reflections",
       notes: [
-        "Most systems fail not because of scale, but because of hidden complexity.",
-        "A dashboard is a decision-making tool, not a decoration.",
-        "Simplicity is often the hardest engineering decision.",
+        "Invisible habits create visible change.",
+        "Discipline protects momentum.",
+        "Not everything meaningful needs an audience.",
       ],
 
       nowTitle: "Now",
       nowDesc:
-        "Currently building data-heavy applications and exploring system architecture patterns that reduce complexity instead of adding more layers.",
+        "Currently focused on building a life that values depth over noise — through discipline, thoughtful work, and steady growth.",
     },
-
     id: {
       philosophyTitle:
-        "Saya tertarik pada bagaimana sistem berkembang, bagaimana ide menyebar, dan bagaimana kejelasan mengubah segalanya.",
+        "Saya tertarik pada pertumbuhan — bagaimana ia terbentuk secara diam-diam, bagaimana disiplin membentuk arah, dan bagaimana kejelasan mengubah keputusan.",
+
       philosophyDesc:
-        "Ini bukan portfolio. Ini ruang berpikir — tempat saya menuliskan pelajaran dari proses membangun, mengeksplorasi ide dengan tenang, dan merefleksikan apa yang benar-benar berhasil.",
+        "Ini bukan portfolio. Ini ruang refleksi — tentang konsistensi, kedewasaan berpikir, dan proses menjadi lebih baik secara perlahan.",
 
       journeyTitle: "Perjalanan",
       journey1:
-        "Saya adalah seorang perantau — membangun hidup jauh dari tempat saya berasal. Tanpa kepastian, tanpa jalan pintas — hanya tekad untuk terus belajar dan membangun sesuatu yang bermakna.",
+        "Saya pernah meninggalkan rumah untuk membangun sesuatu dari awal. Tanpa kepastian. Tanpa jaminan. Hanya keputusan untuk terus melangkah.",
       journey2:
-        "Hidup di tempat yang bukan milik sendiri mengajarkan saya lebih dari sekadar teori. Ia mengajarkan ketahanan, kerendahan hati, dan konsistensi meski tidak ada yang melihat.",
+        "Hidup jauh dari zona nyaman mengajarkan saya bahwa pertumbuhan jarang terasa heroik. Ia sering terasa sepi — dan justru di situlah kekuatannya.",
       journey3:
-        "Pertumbuhan jarang terjadi di zona nyaman. Ia lahir dari keputusan untuk tetap berjalan meski pelan.",
+        "Kita tidak selalu merasa kuat saat bertumbuh. Kadang hanya terasa lelah. Tapi pertumbuhan tidak membutuhkan semangat besar — ia membutuhkan keberlanjutan.",
       journey4:
-        "Sejak kecil saya tumbuh tanpa sosok ayah. Ibu saya membesarkan kami dengan kekuatan yang tidak banyak bicara, tetapi selalu nyata dalam tindakan.",
+        "Saya tumbuh tanpa sosok ayah. Ibu saya memikul tanggung jawab itu dengan tenang. Tanpa banyak bicara, tapi penuh kekuatan.",
       journey5:
-        "Kakak saya berdiri di sampingnya. Tanpa mereka, perjalanan ini akan terasa jauh lebih berat. Apa pun yang saya bangun hari ini, berdiri di atas pengorbanan dan doa mereka. Saya mencintai keluarga saya. I love you, Mom.",
+        "Kakak saya berdiri di sampingnya. Apa pun yang saya bangun hari ini berdiri di atas doa, kesabaran, dan cinta mereka. Kedalaman selalu berawal dari rumah.",
 
       principlesTitle: "Prinsip",
       principles: [
-        "Kejelasan lebih penting daripada kompleksitas.",
-        "Sistem harus berkembang tanpa drama.",
-        "UI yang baik mengurangi beban berpikir.",
-        "Kesederhanaan adalah hasil rekayasa, bukan kebetulan.",
+        "Kejelasan lebih penting daripada kebisingan.",
+        "Konsistensi lebih kuat daripada semangat sesaat.",
+        "Kedalaman lebih berarti daripada validasi.",
+        "Bangun perlahan. Bangun dengan sadar.",
       ],
 
-      notesTitle: "Catatan",
+      notesTitle: "Refleksi",
       notes: [
-        "Banyak sistem gagal bukan karena skala, tetapi karena kompleksitas tersembunyi.",
-        "Dashboard adalah alat pengambilan keputusan, bukan sekadar hiasan.",
-        "Kesederhanaan sering kali adalah keputusan teknis yang paling sulit.",
+        "Kebiasaan kecil membentuk perubahan besar.",
+        "Disiplin menjaga momentum tetap hidup.",
+        "Tidak semua hal bermakna perlu diumumkan.",
       ],
 
       nowTitle: "Saat Ini",
       nowDesc:
-        "Saat ini saya membangun aplikasi berbasis data dan mengeksplorasi pola arsitektur sistem yang mengurangi kompleksitas, bukan menambah lapisan baru.",
+        "Saat ini saya fokus membangun hidup yang lebih dalam daripada bising — melalui disiplin, pekerjaan yang penuh makna, dan pertumbuhan yang konsisten.",
     },
   };
 
