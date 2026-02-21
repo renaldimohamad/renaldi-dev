@@ -63,7 +63,7 @@ It may mean you are building something stable.
   {
     slug: "discipline-over-motivation",
     title: "Discipline Over Motivation",
-    date: "February 28, 2026",
+    date: "February 22, 2026",
     tag: "Mindset",
     readTime: "6 min read",
     excerpt: "Motivation fades. Discipline stays.",
