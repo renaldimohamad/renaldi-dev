@@ -154,9 +154,13 @@ export default function Home() {
           </section>
         </Reveal>
 
+        <Reveal delay={350}>
+          <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent" />
+        </Reveal>
+
         {/* NOW */}
         <Reveal delay={350}>
-          <section className="pt-10 border-t border-neutral-200 dark:border-neutral-800">
+          <section className="pt-0 border-neutral-200 dark:border-neutral-800">
             <h2 className="text-sm uppercase tracking-widest text-neutral-500 dark:text-neutral-500 mb-4">
               {t.nowTitle}
             </h2>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
+import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
@@ -40,19 +41,24 @@ export default function Hero() {
       </div>
 
       <p className="text-[19px] md:text-[20px] leading-[1.5] font-normal text-neutral-800 dark:text-neutral-100">
-        I’m building quietly — in systems, in habits, and in life.
+        I think deeply about how things are built — and who we become while
+        building them.
       </p>
 
       <p className="text-[16px] leading-[1.8] text-neutral-600 dark:text-neutral-400 max-w-xl">
-        This is a space for reflection — on growth that isn’t loud, discipline
-        that compounds, and clarity that takes time.
+        A personal corner of the internet where ideas are shaped slowly, lessons
+        are distilled, and direction is refined over time.
       </p>
 
-      <div className="pt-2">
+      {/* <div className="pt-2">
         <p className="text-neutral-400 dark:text-neutral-500 text-sm">
           — Renaldi
         </p>
-      </div>
+      </div> */}
+
+      <Reveal delay={200}>
+        <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent" />
+      </Reveal>
     </section>
   );
 }
