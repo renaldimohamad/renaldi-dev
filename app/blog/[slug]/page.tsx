@@ -46,12 +46,12 @@ export default async function BlogDetail({
         </header>
 
         {/* Cover Image */}
-        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
+        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden ">
           <Image
             src={post.cover}
             alt={post.title}
             fill
-            className="object-cover"
+            className="object-cover grayscale contrast-110 brightness-90"
             priority
           />
         </div>
@@ -82,18 +82,17 @@ export default async function BlogDetail({
 
           {/* Highlight Quote */}
           <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-6 italic text-neutral-600 dark:text-neutral-400">
-            Clarity is not about having less information. It’s about having the
-            right information.
+            {post.highlight}
           </blockquote>
         </article>
 
         {/* CTA Section */}
         <section className="pt-16 border-t border-neutral-200 dark:border-neutral-800 space-y-4">
           <h3 className="text-lg font-medium text-neutral-900 dark:text-neutral-100">
-            If this helped you,
+            {post.ctaTitle}
           </h3>
           <p className="text-neutral-600 dark:text-neutral-400">
-            Share it with someone building something meaningful.
+            {post.ctaDesc}
           </p>
         </section>
       </div>

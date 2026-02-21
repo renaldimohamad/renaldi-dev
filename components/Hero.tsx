@@ -4,11 +4,11 @@ import ThemeToggle from "./ThemeToggle";
 export default function Hero() {
   return (
     <section className="space-y-10">
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-center">
         <div className="flex items-center gap-4">
           <div className="relative w-14 h-14">
             <Image
-              src="/images/profile_aldi_1.png"
+              src="/images/profile_aldi_2.jpg"
               alt="Renaldi Mohamad"
               fill
               className="rounded-full object-cover"
