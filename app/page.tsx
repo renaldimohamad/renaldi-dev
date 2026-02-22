@@ -112,7 +112,7 @@ export default function Home() {
         </Reveal>
 
         {/* PRINCIPLES */}
-        <Reveal delay={150}>
+        <Reveal delay={250}>
           <section className="space-y-6">
             <h2 className="text-sm uppercase tracking-widest text-neutral-500 dark:text-neutral-500">
               {t.principlesTitle}

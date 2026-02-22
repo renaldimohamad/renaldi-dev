@@ -50,15 +50,18 @@ export default function Hero() {
         are distilled, and direction is refined over time.
       </p>
 
-      {/* <div className="pt-2">
-        <p className="text-neutral-400 dark:text-neutral-500 text-sm">
+      <div className="pt-2">
+        {/* <p className="text-neutral-400 dark:text-neutral-500 text-sm">
           — Renaldi
-        </p>
-      </div> */}
+        </p> */}
+        <Reveal delay={200}>
+          <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent" />
+        </Reveal>
+      </div>
 
-      <Reveal delay={200}>
+      {/* <Reveal delay={200}>
         <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent" />
-      </Reveal>
+      </Reveal> */}
     </section>
   );
 }

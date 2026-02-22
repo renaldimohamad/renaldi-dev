@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { posts } from "@/src/lib/posts";
 import { notFound } from "next/navigation";
+import Reveal from "@/components/Reveal";
+import Footer from "@/components/Footer";
 
 export default async function BlogDetail({
   params,
@@ -22,7 +24,7 @@ export default async function BlogDetail({
       <div className="max-w-3xl mx-auto px-6 py-32 space-y-16">
         {/* Back */}
         <Link
-          href="/"
+          href="/blog"
           className="text-sm text-neutral-500 dark:text-neutral-400 hover:opacity-70 transition"
         >
           ← Back
@@ -95,6 +97,10 @@ export default async function BlogDetail({
             {post.ctaDesc}
           </p>
         </section>
+
+        <Reveal delay={400}>
+          <Footer />
+        </Reveal>
       </div>
     </main>
   );
