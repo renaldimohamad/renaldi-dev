@@ -16,7 +16,7 @@ export const posts: Post[] = [
   {
     slug: "growth-is-quiet",
     title: "Growth Is Quiet",
-    date: "March 5, 2026",
+    date: "January 22, 2026",
     tag: "Reflection",
     readTime: "5 min read",
     excerpt: "Real growth rarely announces itself. It builds in silence.",
