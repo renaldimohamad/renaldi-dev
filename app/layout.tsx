@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.renaldi.fun/"),
+  metadataBase: new URL("https://renaldi.fun/"),
   title: {
     default:
       "Renaldi Mohamad | Engineer building systems that turn complexity into clarity.",
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     title:
       "Renaldi Mohamad | Engineer building systems that turn complexity into clarity.",
     description:
-      "I’m interested in how systems scale, how ideas spread, and how clarity changes everything.",
-    url: "https://www.renaldi.fun/",
+      "I’m interested in how systems scale, how ideas spread, and how clarity chasnges everything.",
+    url: "https://renaldi.fun/",
     siteName: "Renaldi Mohamad",
     images: [
       {
-        url: "https://www.renaldi.fun/images/profile_aldi_2.webp",
+        url: "https://renaldi.fun/images/profile_aldi_3.webp",
         width: 1200,
         height: 630,
         alt: "Renaldi Mohamad — Engineering & Systems",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Renaldi Mohamad",
     description: "Engineer building systems that turn complexity into clarity.",
-    images: ["https://www.renaldi.fun/images/profile_aldi_2.webp"],
+    images: ["https://renaldi.fun/images/profile_aldi_3.webp"],
   },
 
   robots: {
