@@ -12,11 +12,13 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://renaldi.fun/"),
+
   title: {
     default:
       "Renaldi Mohamad | Engineer building systems that turn complexity into clarity.",
     template: "%s — Renaldi Mohamad",
   },
+
   description:
     "I’m interested in how systems scale, how ideas spread, and how clarity changes everything.",
 
@@ -29,11 +31,14 @@ export const metadata: Metadata = {
     "Engineering Blog",
   ],
 
+  verification: {
+    google: "wIvMP-UwQdSEbK3W0bmFYUyKduu53tnFzB0lDJojc9c",
+  },
   openGraph: {
     title:
       "Renaldi Mohamad | Engineer building systems that turn complexity into clarity.",
     description:
-      "I’m interested in how systems scale, how ideas spread, and how clarity chasnges everything.",
+      "I’m interested in how systems scale, how ideas spread, and how clarity changes everything.",
     url: "https://renaldi.fun/",
     siteName: "Renaldi Mohamad",
     images: [
@@ -58,6 +63,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+
+  alternates: {
+    canonical: "https://renaldi.fun/",
   },
 };
 
