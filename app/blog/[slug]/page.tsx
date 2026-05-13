@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,101 +6,85 @@ import { posts } from "@/src/lib/posts";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/src/context/LanguageContext";
+import { translations } from "@/src/lib/translations";
+import { use } from "react";
 
-export default async function BlogDetail({
+export default function BlogDetail({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
+  const { lang } = useLanguage();
+  const t = translations[lang];
+  const { slug } = use(params);
   const cleanSlug = slug.replace(/^\/+/, "").trim();
 
   const post = posts.find((p) => p.slug.replace(/^\/+/, "") === cleanSlug);
 
   if (!post) return notFound();
 
+  const content = post[lang];
+
   return (
-    <main className="min-h-screen transition-colors duration-300">
-      <div className="max-w-3xl mx-auto px-6 py-32 space-y-16">
+    <main className="min-h-screen selection:bg-neutral-200 dark:selection:bg-neutral-800">
+      <div className="max-w-2xl mx-auto px-6 py-24 md:py-32 space-y-16">
         {/* Back */}
         <Link
           href="/blog"
-          className="text-sm text-neutral-500 dark:text-neutral-400 hover:opacity-70 transition"
+          className="inline-flex items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 group"
         >
-          ← Back
+          <span className="group-hover:-translate-x-1 transition-transform duration-300">←</span>
+          <span>{t.backToWriting}</span>
         </Link>
 
         {/* Header */}
-        <header className="space-y-6">
-          <div className="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-500">
-            {post.tag}
+        <header className="space-y-8">
+          <div className="flex items-center gap-3 text-xs font-medium text-neutral-400 dark:text-neutral-500 tracking-[0.2em]">
+            <span className="uppercase">{content.tag}</span>
+            <span className="w-1 h-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
+            <span>{content.date}</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-neutral-900 dark:text-neutral-100">
-            {post.title}
+          <h1 className="text-2xl md:text-3xl font-medium tracking-tight leading-[1.2] text-neutral-900 dark:text-neutral-100">
+            {content.title}
           </h1>
-
-          <div className="text-sm text-neutral-500 dark:text-neutral-500 flex items-center gap-3">
-            <span>{post.date}</span>
-            <span>•</span>
-            <span>{post.readTime}</span>
-          </div>
         </header>
 
         {/* Cover Image */}
-        <div className="relative w-full h-[400px] rounded-2xl overflow-hidden ">
+        <div className="relative w-full aspect-video rounded-2xl overflow-hidden ring-1 ring-neutral-200 dark:ring-neutral-800">
           <Image
             src={post.cover}
-            alt={post.title}
+            alt={content.title}
             fill
-            className="object-cover grayscale contrast-110 brightness-90"
+            className="object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
             priority
           />
         </div>
 
-        {/* Divider */}
-        <div className="h-px bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent" />
-
         {/* Article */}
-        <article className="space-y-8 text-[18px] leading-relaxed text-neutral-700 dark:text-neutral-300">
-          {post.content
+        <article className="space-y-10 text-editorial text-neutral-600 dark:text-neutral-400">
+          {content.content
             .trim()
             .split("\n\n")
-            .map((paragraph, index) => {
-              // Dropcap for first paragraph
-              if (index === 0) {
-                return (
-                  <p key={index} className="text-xl leading-relaxed">
-                    <span className="float-left text-5xl font-semibold mr-3 mt-1 text-neutral-900 dark:text-neutral-100">
-                      {paragraph.charAt(0)}
-                    </span>
-                    {paragraph.slice(1)}
-                  </p>
-                );
-              }
-
-              return <p key={index}>{paragraph}</p>;
-            })}
+            .map((paragraph, index) => (
+              <p key={index} className="max-w-[65ch]">
+                {paragraph}
+              </p>
+            ))}
 
           {/* Highlight Quote */}
-          <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-6 italic text-neutral-600 dark:text-neutral-400">
-            {post.highlight}
+          <blockquote className="py-8 border-y border-neutral-100 dark:border-neutral-900 text-lg md:text-xl font-light text-neutral-900 dark:text-neutral-100 italic leading-relaxed text-center max-w-[65ch] mx-auto">
+            “{content.highlight}”
           </blockquote>
         </article>
 
-        {/* CTA Section */}
-        <section className="pt-16 border-t border-neutral-200 dark:border-neutral-800 space-y-4">
-          <h3 className="text-lg font-medium text-neutral-900 dark:text-neutral-100">
-            {post.ctaTitle}
-          </h3>
-          <p className="text-neutral-600 dark:text-neutral-400">
-            {post.ctaDesc}
-          </p>
-        </section>
-
-        <Reveal delay={400}>
-          <Footer />
-        </Reveal>
+        {/* FOOTER */}
+        <div className="pt-16">
+          <Reveal delay={400}>
+            <Footer />
+          </Reveal>
+        </div>
       </div>
     </main>
   );
