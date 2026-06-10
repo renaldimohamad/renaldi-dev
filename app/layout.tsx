@@ -54,7 +54,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Renaldi Mohamad",
-    description: "Fullstack Developer building systems that turn complexity into clarity.",
+    description:
+      "Fullstack Developer building systems that turn complexity into clarity.",
     images: ["/images/og-main.png"],
   },
 
@@ -64,9 +65,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 
@@ -83,24 +84,25 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Renaldi Mohamad",
-    "url": "https://renaldi.fun",
-    "image": "https://renaldi.fun/images/og-main.png",
-    "jobTitle": "Fullstack Developer",
-    "description": "Engineer building systems that turn complexity into clarity.",
-    "sameAs": [
+    name: "Renaldi Mohamad",
+    url: "https://renaldi.fun",
+    image: "https://renaldi.fun/images/blog_cover_2.webp",
+    jobTitle: "Fullstack Developer",
+    description: "Engineer building systems that turn complexity into clarity.",
+    sameAs: [
       "https://github.com/renaldimohamad",
       "https://linkedin.com/in/renaldimohamad",
-      "https://me.renaldi.fun"
-    ]
+      "https://me.renaldi.fun",
+    ],
   };
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Renaldi Mohamad",
-    "url": "https://renaldi.fun",
-    "description": "Personal thinking space and developer journal of Renaldi Mohamad."
+    name: "Renaldi Mohamad",
+    url: "https://renaldi.fun",
+    description:
+      "Personal thinking space and developer journal of Renaldi Mohamad.",
   };
 
   return (
