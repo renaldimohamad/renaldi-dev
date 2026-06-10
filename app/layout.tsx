@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Renaldi Mohamad",
     images: [
       {
-        url: "/images/og-main.png",
+        url: "/images/blog_cover_2.webp",
         width: 1200,
         height: 630,
         alt: "Renaldi Mohamad — Fullstack Developer",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Renaldi Mohamad",
     description:
       "Fullstack Developer building systems that turn complexity into clarity.",
-    images: ["/images/og-main.png"],
+    images: ["/images/blog_cover_2.webp"],
   },
 
   robots: {
