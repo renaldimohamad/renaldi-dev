@@ -32,9 +32,10 @@ export default function BlogDetail({
         {/* Back */}
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 group"
-        >
-          <span className="group-hover:-translate-x-1 transition-transform duration-300">←</span>
+          className="inline-flex items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 group">
+          <span className="group-hover:-translate-x-1 transition-transform duration-300">
+            ←
+          </span>
           <span>{t.backToWriting}</span>
         </Link>
 
@@ -74,13 +75,13 @@ export default function BlogDetail({
             ))}
 
           {/* Highlight Quote */}
-          <blockquote className="py-8 border-y border-neutral-100 dark:border-neutral-900 text-lg md:text-xl font-light text-neutral-900 dark:text-neutral-100 italic leading-relaxed text-center max-w-[65ch] mx-auto">
+          <blockquote className="py-8 border-y border-neutral-100 dark:border-neutral-900 text-lg md:text-xl font-light text-neutral-900 dark:text-neutral-500 italic leading-relaxed text-center max-w-[65ch] mx-auto">
             “{content.highlight}”
           </blockquote>
         </article>
 
         {/* FOOTER */}
-        <div className="pt-16">
+        <div className="pt-0">
           <Reveal delay={400}>
             <Footer />
           </Reveal>

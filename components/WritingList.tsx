@@ -22,11 +22,12 @@ export default function WritingList() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group block space-y-5 transition-all duration-500"
-            >
+              className="group block space-y-5 transition-all duration-500">
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-[10px] font-bold tracking-[0.15em] text-neutral-400 dark:text-neutral-500 uppercase">
-                  <span className="text-neutral-900 dark:text-neutral-100">{content.tag}</span>
+                  <span className="text-neutral-900 dark:text-neutral-400">
+                    {content.tag}
+                  </span>
                   <span className="w-1 h-1 rounded-full bg-neutral-200 dark:bg-neutral-800" />
                   <span>{content.date}</span>
                 </div>
@@ -42,13 +43,15 @@ export default function WritingList() {
                 </div>
 
                 <div className="flex items-center justify-between pt-1">
-                  <div className="text-[11px] font-medium text-neutral-400 dark:text-neutral-500 tracking-wide uppercase italic opacity-80">
+                  <div className="text-[11px] font-medium tracking-wide uppercase italic opacity-80">
                     {content.readTime}
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm font-medium text-neutral-900 dark:text-neutral-100 transition-all duration-500 md:opacity-0 md:group-hover:opacity-100 md:-translate-x-2 md:group-hover:translate-x-0">
+                  <div className="flex items-center gap-2 text-sm font-medium light:text-neutral-900 dark:text-neutral-500 transition-all duration-500 md:opacity-0 md:group-hover:opacity-100 md:-translate-x-2 md:group-hover:translate-x-0">
                     <span>Read article</span>
-                    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
                   </div>
                 </div>
               </div>

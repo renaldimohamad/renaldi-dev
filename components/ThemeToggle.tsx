@@ -14,6 +14,10 @@ export default function ThemeToggle() {
 
   const isDark = resolvedTheme === "dark";
 
+  const changeThemeTitle = isDark
+    ? "Switch to light theme"
+    : "Switch to dark theme";
+
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
@@ -23,13 +27,13 @@ export default function ThemeToggle() {
         text-neutral-500
         dark:text-neutral-400
         hover:text-black
-        dark:hover:text-white
+        dark:hover:text-neutral-400
         transition-colors
         duration-200
+        cursor-pointer
       "
-      aria-label="Toggle theme"
-    >
-      {isDark ? <Sun size={18} /> : <Moon size={18} />}
+      title={changeThemeTitle}>
+      {isDark ? <Sun size={18} /> : <Moon size={16} />}
     </button>
   );
 }

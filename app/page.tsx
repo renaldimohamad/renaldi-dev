@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import WritingList from "@/components/WritingList";
 import Reveal from "@/components/Reveal";
 import { useLanguage } from "@/src/context/LanguageContext";
+import FloatingToolbar from "@/components/FloatingToolbar";
 
 export default function Home() {
   const { lang } = useLanguage();
@@ -103,8 +104,7 @@ export default function Home() {
 
       ctaTitle:
         "Saya terbuka untuk proyek freelance yang fokus pada kualitas, struktur, dan pengalaman pengguna yang jelas.",
-      ctaDesc:
-        "Jika Anda memiliki kebutuhan atau ide, mari berdiskusi.",
+      ctaDesc: "Jika Anda memiliki kebutuhan atau ide, mari berdiskusi.",
       ctaPortfolio: "Untuk karya dan proyek terpilih, lihat",
       ctaLink: "Contact via Email",
     },
@@ -144,8 +144,7 @@ export default function Home() {
               <a
                 href="https://me.renaldi.fun"
                 target="_blank"
-                className="text-xs font-medium text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300"
-              >
+                className="text-xs font-medium text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300">
                 {t.buildLink}
               </a>
             </div>
@@ -207,9 +206,11 @@ export default function Home() {
 
         {/* CTA */}
         <Reveal delay={600}>
-          <section className="p-8 md:p-12 rounded-2xl bg-neutral-100 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800/50 space-y-8">
+          <section className="p-8 md:p-12 rounded-2xl bg-netral border border-neutral-200 dark:border-neutral-800/50 space-y-8">
             <div className="space-y-4">
-              <h2 className="text-xl font-medium leading-tight">{t.ctaTitle}</h2>
+              <h2 className="text-xl font-medium leading-tight">
+                {t.ctaTitle}
+              </h2>
               <p className="text-neutral-500 dark:text-neutral-400 font-light leading-relaxed max-w-lg">
                 {t.ctaDesc}
               </p>
@@ -218,8 +219,7 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <a
                 href="mailto:renaldimohamad@gmail.com"
-                className="inline-flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all duration-300"
-              >
+                className="inline-flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all duration-300">
                 {t.ctaLink} <span>→</span>
               </a>
 
@@ -229,8 +229,7 @@ export default function Home() {
                   <a
                     href="https://me.renaldi.fun"
                     target="_blank"
-                    className="text-neutral-900 dark:text-neutral-100 font-medium hover:underline decoration-neutral-300 underline-offset-4"
-                  >
+                    className="font-medium hover:underline decoration-neutral-300 underline-offset-4">
                     me.renaldi.fun
                   </a>
                 </p>

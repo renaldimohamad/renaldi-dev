@@ -16,9 +16,10 @@ export default function BlogPage() {
       <div className="max-w-2xl mx-auto px-6 py-24 md:py-32 space-y-24">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 group"
-        >
-          <span className="group-hover:-translate-x-1 transition-transform duration-300">←</span>
+          className="inline-flex items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-300 group">
+          <span className="group-hover:-translate-x-1 transition-transform duration-300">
+            ←
+          </span>
           <span>{t.backToHome}</span>
         </Link>
 

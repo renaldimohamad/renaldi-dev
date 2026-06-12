@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import "./globals.css";
 import { LanguageProvider } from "@/src/context/LanguageContext";
+import FloatingToolbar from "@/components/FloatingToolbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -81,33 +82,80 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // const jsonLd = {
+  //   "@context": "https://schema.org",
+  //   "@type": "Person",
+  //   name: "Renaldi Mohamad",
+  //   url: "https://renaldi.fun",
+  //   image: "https://renaldi.fun/images/blog_cover_2.webp",
+  //   jobTitle: "Fullstack Developer",
+  //   description: "Engineer building systems that turn complexity into clarity.",
+  //   sameAs: [
+  //     "https://github.com/renaldimohamad",
+  //     "https://linkedin.com/in/renaldimohamad",
+  //     "https://me.renaldi.fun",
+  //   ],
+  // };
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Renaldi Mohamad",
-    url: "https://renaldi.fun",
-    image: "https://renaldi.fun/images/blog_cover_2.webp",
-    jobTitle: "Fullstack Developer",
-    description: "Engineer building systems that turn complexity into clarity.",
-    sameAs: [
-      "https://github.com/renaldimohamad",
-      "https://linkedin.com/in/renaldimohamad",
-      "https://me.renaldi.fun",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://renaldi.fun/#person",
+        name: "Renaldi Mohamad",
+        url: "https://renaldi.fun",
+        image: "https://renaldi.fun/images/blog_cover_2.webp",
+        jobTitle: "Fullstack Developer",
+        description:
+          "Engineer building systems that turn complexity into clarity.",
+        sameAs: [
+          "https://github.com/renaldimohamad",
+          "https://linkedin.com/in/renaldimohamad",
+          "https://me.renaldi.fun",
+        ],
+        worksFor: {
+          "@type": "Organization",
+          name: "Freelance / Independent",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://renaldi.fun/#website",
+        url: "https://renaldi.fun",
+        name: "Renaldi Mohamad",
+        publisher: {
+          "@id": "https://renaldi.fun/#person",
+        },
+      },
     ],
   };
+
+  // const websiteJsonLd = {
+  //   "@context": "https://schema.org",
+  //   "@type": "WebSite",
+  //   name: "Renaldi Mohamad",
+  //   url: "https://renaldi.fun",
+  //   description:
+  //     "Personal thinking space and developer journal of Renaldi Mohamad.",
+  // };
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Renaldi Mohamad",
+    "@id": "https://renaldi.fun/#website",
     url: "https://renaldi.fun",
-    description:
-      "Personal thinking space and developer journal of Renaldi Mohamad.",
+    name: "Renaldi Mohamad",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://renaldi.fun/search?q={query}",
+      "query-input": "required name=query",
+    },
   };
 
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <head>
+      <body className="font-sans antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -116,10 +164,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-      </head>
-      <body className="font-sans antialiased">
         <Providers>
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <FloatingToolbar />
+            {children}
+          </LanguageProvider>
         </Providers>
       </body>
     </html>
